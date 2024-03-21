@@ -1,0 +1,232 @@
+body{
+    font-family: monospace;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+
+.green{
+    width: 400px;
+    height: 400px;
+    background-image: url(husky.jpeg);
+    position: absolute;
+    right: 21rem; /* Adjust this value to position the div */
+    top: 35%; /* Center the div vertically */
+    transform: translateY(-50%);
+   
+    background-size: cover;
+}
+
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    text-align: left;
+    position: absolute;
+    top: 18rem;
+    padding: 15px;
+
+}
+
+
+
+
+
+section{
+    position: relative;
+    height: 100vh;
+    color: #222;
+    display: grid;
+    place-content: center;
+}
+
+section:nth-child(1){
+    background: #faded7;
+}
+
+section:nth-child(2){
+    background: #feffbf;
+}
+
+section:nth-child(3){
+    background: #b0efef;
+}
+
+section:nth-child(4){
+    background: #ffcbcb;
+}
+
+
+
+.lerp-wrap{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1.25rem;
+    line-height: 1.1;
+    overflow: hidden;
+}
+
+.lerp-wrap span{
+    display: inline-block;
+    font-size: clamp(3px, 1vw, 3vw);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    font-size: 100px;
+    padding: 30px;
+}
+
+
+
+.card{
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 3px solid ;
+    animation: moveColor 5s linear infinite alternate;
+    justify-content: left;
+    /* transform: translateX(-80%); */
+    position: absolute; 
+    left: 0;
+    top: 35%;
+    margin-left: 30%; 
+    
+}
+
+
+
+
+@keyframes moveColor {
+    0% {
+        border-color: blue; /* Start with blue color */
+    }
+    50% {
+        border-color: rgb(255, 0, 43); /* Transition to pink color at 50% */
+    }
+    100% {
+        border-color: rgb(0, 213, 255); /* End back at blue color */
+    }
+}
+
+.card-title{
+    font-size: 2.0rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.card-para{
+    font-size: 1.0rem;
+    text-align: justify; 
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+
+.flex{
+    display: flex;
+}
+
+.red{
+    width: 400px;
+    height: 400px;
+    background-image: url(german.jpeg);
+    background-size: cover;
+    position: relative;
+}
+
+.card1{
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 3px solid ;
+    animation: moveColor 5s linear infinite alternate;
+    
+    
+}
+
+
+.blue{
+    width: 400px;
+    height: 400px;
+    background-image: url(labradore.jpeg);
+    justify-content: left;
+    transform: translateX(-80%);
+    background-size: cover;
+    position: absolute;
+
+}
+
+.card2{
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 3px solid ;
+    animation: moveColor 5s linear infinite alternate;
+    justify-self: right;
+    justify-content: right;
+    align-items: right;
+    position: relative
+
+}
+
+.yellow {
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+    position: sticky;
+    overflow: hidden;   
+    transition: bottom 0.3s; /* Add a transition for smooth animation */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.yellow h1{
+    text-align: center;
+}
+
+.yellow p{
+    text-align: justify;
+    margin: 30px;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+    backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    
+  }
+  
+  .navbar a {
+    color: #333; /* Text color */
+    text-decoration: none;
+    margin-left: 20px; /* Add margin between links */
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .navbar a:first-child {
+    margin-left: auto; /* Pushes the first link to the right */
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .logo {
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Make the image a block element */
+    width: 50px;
+    height: 50px;
+    
+  }
+  

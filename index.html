@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dogs information </title>
+    
+    <link href="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div data-scroll-container="">
+        <section data-scroll-section="">
+            <div class="navbar">
+                <a href="#husky">Husky</a>
+                <a href="#labrador">Labrador</a>
+                <a href="#german">German</a>
+              
+            <img class="logo" src="dog.gif" alt=""></div>
+            <span class="lerp-wrap" data-scroll="">
+                <!-- <span data-scroll="" data-scroll-delay="0.18" data-scroll-speed="33">m</span>
+                <span data-scroll="" data-scroll-delay="0.14" data-scroll-speed="33">a</span>
+                <span data-scroll="" data-scroll-delay="0.12" data-scroll-speed="33">c</span>
+                <span data-scroll="" data-scroll-delay="0.1" data-scroll-speed="33">o</span>
+                <span data-scroll="" data-scroll-delay="0.08" data-scroll-speed="33">s</span> -->
+
+                <div class="green" data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="33"></div>
+            </span>
+
+            
+                <!-- <span class="scroll-text" data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.14" data-scroll-speed="-33" >
+                    <h1>HUSKY</h1>
+                   </span> -->
+
+                   <!-- card info about husky -->
+                   <div class="card" data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="-33" >
+                    <h5 class="card-title">HUSKY</h5>
+                    <p class="card-para">Siberian Huskies are medium-sized dogs bred for sled-pulling in harsh Arctic conditions. They have a wolf-like appearance, are friendly and gentle, require regular exercise, shed heavily, and may be prone to certain health issues. They need consistent training and a dedicated owner.</p>
+                  </div>
+            
+        </section>
+
+        <section data-scroll-section="">
+           <div class="flex"> 
+            <span class="lerp-wrap" data-scroll="">
+                
+                <div class="red" data-scroll="" data-scroll-direction="" data-scroll-delay="0.08" data-scroll-speed="33" data-scroll-class="scale" data-scroll-scale="1.5"></div>
+            </span>
+
+            <div class="card1" data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.08" data-scroll-speed="33" >
+                <h5 class="card-title">GERMAN SHEPHERD</h5>
+                <p class="card-para">The German Shepherd is a breed of medium to large-sized working dog that originated in Germany. They are known for their intelligence, strength, and loyalty, making them one of the most popular breeds for various roles including police and military work, search and rescue, therapy, and even as family pets. German Shepherds are highly trainable and are often used in roles that require obedience and agility. They have a double coat that is usually tan and black or red and black, and they require regular exercise and mental stimulation to stay happy and healthy.</p>
+              </div>
+
+
+           </div>
+
+
+        </section>
+
+
+
+        <section data-scroll-section="">
+            
+            <span class="lerp-wrap" data-scroll="">
+                
+                <div class="blue" data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="-33" ></div>
+            </span>
+            <div class="card2" data-scroll="" data-scroll-direction="horizontal" data-scroll-delay="0.08" data-scroll-speed="33" >
+                <h5 class="card-title">LABRADOR RETRIEVER</h5>
+                <p class="card-para">The Labrador Retriever is a beloved breed known for its friendly demeanor and intelligence. They excel as family pets, therapy dogs, and in various working roles. Labs are skilled swimmers and have a gentle, loyal nature, making them a popular choice for many households.</p>
+              </div>
+        </section>
+
+
+
+
+        <section data-scroll-section="">
+            
+            <span class="lerp-wrap" data-scroll="">
+                
+                <div class="yellow" data-scroll="" data-scroll-direction="" data-scroll-delay="0.08" data-scroll-speed="-6" >
+                   
+                    <h1>thanks !!</h1>
+                    <p>happy to see that you love dog and love to read about them</p>
+                    <img src="dog.gif" alt=""> 
+                </div>
+            </span>
+        </section>
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <script>
+         const locoscroll = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+            smartphone: {
+                smooth: true
+            }
+        });
+
+
+
+        const yellowDiv = document.querySelector('.yellow');
+
+let lastScrollTop = 0;
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        yellowDiv.style.bottom = '20px'; // Show the div
+    } else {
+        // Scrolling up
+        yellowDiv.style.bottom = '-100px'; // Hide the div
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+}, false);
+
+    </script>
+</body>
+</html>
